@@ -103,6 +103,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
+    public void carButtonOnClick(View view){
+        System.out.println("dadadadadad");
+    }
+
     /**
      * Saves the state of the map when the activity is paused.
      */

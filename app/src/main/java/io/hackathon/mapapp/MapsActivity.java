@@ -5,12 +5,14 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -107,11 +109,24 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void carButtonOnClick(View view){
-        Dialog dialog = new Dialog(MapsActivity.this);
+        final Dialog dialog = new Dialog(MapsActivity.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         dialog.setContentView(R.layout.dialog_buttons);
 
+        Button btn1 = (Button) dialog.findViewById(R.id.button1);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+                Snackbar snackbar = Snackbar
+                        .make(findViewById(R.id.snackbarPosition), "Zgloszenie zostalo dodane.",
+                                Snackbar.LENGTH_LONG);
+
+                snackbar.show();
+            }
+        });
         dialog.show();
     }
 

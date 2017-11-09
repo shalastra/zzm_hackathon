@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/MapApp.iml" filepath="$PROJECT_DIR$/MapApp.iml" />
       <module fileurl="file://C:\Users\Allocer\Desktop\zzm_hackathon\MapApp.iml" filepath="C:\Users\Allocer\Desktop\zzm_hackathon\MapApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/zzm_hackathon.iml" filepath="$PROJECT_DIR$/zzm_hackathon.iml" />

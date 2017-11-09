@@ -1,5 +1,6 @@
 package io.hackathon.mapapp;
 
+import android.app.Dialog;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -105,7 +107,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void carButtonOnClick(View view){
-        System.out.println("dadadadadad");
+        Dialog dialog = new Dialog(MapsActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        dialog.setContentView(R.layout.dialog_buttons);
+
+        dialog.show();
     }
 
     /**

@@ -1,0 +1,50 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GridLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="2"
+    android:rowCount="2"
+    style="@style/AlertDialog.AppCompat.Light"
+    android:orientation="horizontal"
+    tools:context=".MapsActivity" >
+    <Button
+        android:id="@+id/button1"
+        android:layout_gravity="left|top"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_blue_light"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Wypadek" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="left|top"
+        android:background="@android:color/holo_blue_light"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Korek" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="150dp"
+        android:layout_margin="5dp"
+        android:layout_height="60dp"
+        android:background="@android:color/holo_blue_light"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="left|top"
+        android:text="Dziura" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="150dp"
+        android:layout_margin="5dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_height="60dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_gravity="left|top"
+        android:text="Inne" />
+</GridLayout>

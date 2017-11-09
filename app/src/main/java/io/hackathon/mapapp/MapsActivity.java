@@ -61,22 +61,23 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private String[] mLikelyPlaceAttributions;
     private LatLng[] mLikelyPlaceLatLngs;
 
-    private MarkerOptions options;
-    private List<LatLng> positons;
+    private List<MarkerOptions> positons;
 
     public MapsActivity() {
-        this.options = new MarkerOptions();
         this.positons = new ArrayList<>();
     }
 
     private void initPositions() {
-        positons.add(new LatLng(50.029559, 19.911278));
+        MarkerOptions bikeOptions = new MarkerOptions();
+        bikeOptions.position(new LatLng(50.029559, 19.911278));
+        bikeOptions.title("Sciezka rowerowa");
 
-        for(LatLng point: positons) {
-            options.position(point);
-            options.title("Sciezka");
-            mMap.addMarker(options);
-        }
+        MarkerOptions driverOptions = new MarkerOptions();
+        driverOptions.position(new LatLng(50.028389, 19.909556));
+        driverOptions.title("Dziura w drodze");
+
+        mMap.addMarker(bikeOptions);
+        mMap.addMarker(driverOptions);
     }
 
     @Override
